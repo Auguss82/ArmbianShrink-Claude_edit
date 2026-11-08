@@ -2,6 +2,7 @@
 ArmbianShrink is a bash script that automatically shrink a armbian image that will then resize to the max size of the SD card on boot. This will make putting the image back onto the SD card faster and the shrunk images will compress better.
 
 This script is based on [PiShrink](https://github.com/Drewsif/PiShrink) by [Drewsif](https://github.com/Drewsif)
+
 This script was forked from [ArmbianShrink](https://github.com/dedalodaelus/ArmbianShrink) by [dedalodaelus](https://github.com/dedalodaelus)
 
 Assisted by Claude.ai:
