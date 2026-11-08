@@ -45,10 +45,88 @@ wget https://raw.githubusercontent.com/Auguss82/ArmbianShrink/master/armbianshri
 chmod +x armbianshrink.sh
 sudo mv armbianshrink.sh /usr/local/bin
 ```
-
-## Example ##
+## Starting ##
 ```bash
+shrinker_claudai.sh v0.1.6
+shrinker_claudai.sh: [step 16:22:35 | +0:00:00] Checking required tools are installed: parted partprobe losetup tune2fs md5sum e2fsck resize2fs mount umount truncate mktemp
+shrinker_claudai.sh: Copying ambian_pi_backup_mbuffer.img to shrunken1.img... ...
+shrinker_claudai.sh: [step 16:22:35 | +0:00:00] Making a full copy of the image (only the copy is modified; the original is left untouched)
+shrinker_claudai.sh: [step 16:22:35 | +0:00:00] Source: apparent size 268436504576 bytes, 251G actually allocated on disk
+shrinker_claudai.sh: [step 16:22:40 | +0:00:05] Copy: read 441 of 256001 MiB (0%), 368M allocated in the copy
+```
 
+
+## Ending ##
+```bash
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Copy finished (exit code 0); data may still be flushing to the destination drive
+shrinker_claudai.sh: Gathering data ...
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Reading the partition table of shrunken.img with parted
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Partition table is msdos; last partition is #1 (primary), starting at byte 4194304, flags: none
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Attaching a loop device at offset 4194304 so the last partition can be handled as a filesystem
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Reading filesystem size with tune2fs
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Filesystem has 64879616 blocks of 4096 bytes
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Enabling Armbian's armbian-resize-filesystem.service so the filesystem expands on first boot
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Mounting /dev/loop0 on temporary directory /tmp/tmp.ROwTHDPsHx
+shrinker_claudai.sh: [step 15:09:14 | +2:50:49] Unmounting /tmp/tmp.ROwTHDPsHx and removing the temporary directory
+shrinker_claudai.sh: Syspreping: Removing logs, apt archives, dhcp leases and ssh hostkeys ...
+shrinker_claudai.sh: [step 15:09:15 | +2:50:50] Mounting the filesystem to delete logs, apt archives, DHCP leases, tmp files and SSH host keys
+shrinker_claudai.sh: [step 15:09:15 | +2:50:50] Mounting /dev/loop0 on temporary directory /tmp/tmp.JRH69PUEgp
+removed '/tmp/tmp.JRH69PUEgp/var/cache/apt/archives/lock'
+removed directory '/tmp/tmp.JRH69PUEgp/var/cache/apt/archives/partial'
+removed '/tmp/tmp.JRH69PUEgp/var/cache/apt/archives/updates.list'
+removed '/tmp/tmp.JRH69PUEgp/var/cache/apt/archives/updates.number'
+removed '/tmp/tmp.JRH69PUEgp/var/log/README'
+removed '/tmp/tmp.JRH69PUEgp/var/log/alternatives.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/apt/eipp.log.xz'
+removed '/tmp/tmp.JRH69PUEgp/var/log/apt/history.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/apt/term.log'
+removed directory '/tmp/tmp.JRH69PUEgp/var/log/apt'
+removed '/tmp/tmp.JRH69PUEgp/var/log/armbian-hardware-monitor.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/armbian-ramlog.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/auth.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/btmp'
+removed '/tmp/tmp.JRH69PUEgp/var/log/cron.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/dpkg.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/journal/02497bb0487847bc9eba1b9a303a0c00/system.journal'
+removed '/tmp/tmp.JRH69PUEgp/var/log/journal/02497bb0487847bc9eba1b9a303a0c00/system@7667582dfcb14dc3b5edb64f5f8c2c2c-0000000000000001-00065e623f652b4f.journal'
+removed directory '/tmp/tmp.JRH69PUEgp/var/log/journal/02497bb0487847bc9eba1b9a303a0c00'
+removed directory '/tmp/tmp.JRH69PUEgp/var/log/journal'
+removed '/tmp/tmp.JRH69PUEgp/var/log/kern.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/lastlog'
+removed directory '/tmp/tmp.JRH69PUEgp/var/log/private'
+removed directory '/tmp/tmp.JRH69PUEgp/var/log/runit/ssh'
+removed directory '/tmp/tmp.JRH69PUEgp/var/log/runit'
+removed '/tmp/tmp.JRH69PUEgp/var/log/syslog'
+removed '/tmp/tmp.JRH69PUEgp/var/log/user.log'
+removed '/tmp/tmp.JRH69PUEgp/var/log/wtmp'
+removed '/tmp/tmp.JRH69PUEgp/var/log/wtmp.db'
+removed '/tmp/tmp.JRH69PUEgp/etc/ssh/ssh_host_ecdsa_key'
+removed '/tmp/tmp.JRH69PUEgp/etc/ssh/ssh_host_ecdsa_key.pub'
+removed '/tmp/tmp.JRH69PUEgp/etc/ssh/ssh_host_ed25519_key'
+removed '/tmp/tmp.JRH69PUEgp/etc/ssh/ssh_host_ed25519_key.pub'
+removed '/tmp/tmp.JRH69PUEgp/etc/ssh/ssh_host_rsa_key'
+removed '/tmp/tmp.JRH69PUEgp/etc/ssh/ssh_host_rsa_key.pub'
+shrinker_claudai.sh: [step 15:09:15 | +2:50:50] Unmounting /tmp/tmp.JRH69PUEgp and removing the temporary directory
+shrinker_claudai.sh: Checking filesystem ...
+shrinker_claudai.sh: [step 15:09:15 | +2:50:50] Running e2fsck -pf on /dev/loop0 (forced check; the filesystem must be clean before it can be resized)
+armbi_root: 29352/16220160 files (0.1% non-contiguous), 1384075/64879616 blocks
+shrinker_claudai.sh: [step 15:09:16 | +2:50:51] Asking resize2fs for the minimum possible filesystem size
+resize2fs 1.47.2 (1-Jan-2025)
+shrinker_claudai.sh: Shrinking filesystem ...
+shrinker_claudai.sh: [step 15:09:16 | +2:50:51] Shrinking filesystem from 64879616 to 639205 blocks (includes a small safety buffer); this moves data and can take a long time
+resize2fs 1.47.2 (1-Jan-2025)
+Resizing the filesystem on /dev/loop0 to 639205 (4k) blocks.
+Begin pass 3 (max = 1980)
+Scanning inode table          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+The filesystem on /dev/loop0 is now 639205 (4k) blocks long.
+
+shrinker_claudai.sh: [step 15:09:18 | +2:50:53] Deleting partition #1 from the partition table (the data stays; only the table entry is removed)
+shrinker_claudai.sh: [step 15:09:18 | +2:50:53] Recreating partition at byte 4194304, ending at byte 2622377984
+shrinker_claudai.sh: Shrinking image ...
+shrinker_claudai.sh: [step 15:09:18 | +2:50:53] Truncating the image file to 2622378496 bytes (removing the now-unused space at the end)
+shrinker_claudai.sh: [step 15:09:18 | +2:50:53] Done
+shrinker_claudai.sh: Shrunk shrunken.img from 251G to 2.5G ...
+shrinker_claudai.sh: [step 15:09:18 | +2:50:53] Detaching loop device /dev/loop0
 ```
 
 ## Contributing ##
