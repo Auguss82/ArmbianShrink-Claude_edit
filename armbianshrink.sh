@@ -5,7 +5,7 @@ version="v0.1.6"
 # Set to "yes" to print a "[step]" line describing what the script is doing at each
 # stage. Independent of -v (which only affects the compressor). Can also be set from
 # the environment, e.g.  LISTSTEPS=no ./armbianshrink.sh ...
-LISTSTEPS="${LISTSTEPS:-yes}"
+LISTSTEPS="${LISTSTEPS:yes}"
 
 CURRENT_DIR="$(pwd)"
 SCRIPTNAME="${0##*/}"
