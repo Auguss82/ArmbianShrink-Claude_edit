@@ -128,6 +128,14 @@ shrinker_claudai.sh: [step 15:09:18 | +2:50:53] Done
 shrinker_claudai.sh: Shrunk shrunken.img from 251G to 2.5G ...
 shrinker_claudai.sh: [step 15:09:18 | +2:50:53] Detaching loop device /dev/loop0
 ```
+## Result ##
+```bash
+-rw-r--r--  1 root    root    251G Nov  8 10:39 ambian_pi_backup_mbuffer.img
+-rwxr-xr-x  1 root    root     19K Nov  8 12:18 shrinker_claudai.sh
+-rw-r--r--  1 root    root    2.5G Nov  8 15:09 shrunken.img
+
+```
+
 
 ## Contributing ##
 I only use this for scripts that I find and want to improve for my use. I just publish them here if someone else would like to use them too.
